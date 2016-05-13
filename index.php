@@ -368,6 +368,22 @@ function populateTables($mysqli) {
 	} else {
 		echo "Error:". "<br>" . $mysqli->error;
 	}
+	//Professor 3
+	$sql = "INSERT INTO Professor (ssn, fname, lname, street, city, state, phone_area, phone, salary, title, sex)
+	VALUES (000000003, 'Tony', 'Stark', '123 Ironman Str', 'Long City', 'CA', '211', '9876543211', 80000.00, 'Dr', 'M')";
+	if ($mysqli->query($sql) === TRUE) {
+		echo "Professors 3 added successfully...". "<br>";
+	} else {
+		echo "Error:". "<br>" . $mysqli->error;
+	}
+
+	$sql = "INSERT INTO Degree (degree_name, p_ssn, year, college)
+	VALUES ('Electrical Engineering BS', 000000003, 2000, 'Massachussetts Institute of Technology')";
+	if ($mysqli->query($sql) === TRUE) {
+		//echo "Professors 3's degree added successfully...". "<br>";
+	} else {
+		echo "Error:". "<br>" . $mysqli->error;
+	}
 	
 	/////Courses//////
 	//Course 1
@@ -402,7 +418,70 @@ function populateTables($mysqli) {
 	} else {
 		echo "Error:". "<br>" . $mysqli->error;
 	}
-	
+	//Section 1:Course 1_1
+	$sql = "INSERT INTO Section (section_no, classroom, meeting_days, begin_time, end_time, num_seats, course_no, p_ssn"
+	VALUES (442_1, '300CS', 'M,W', '8:00AM','9:15AM', '32',442,000000001 )
+	if ($mysqli->query($sql) === TRUE) {
+		echo "Section 1 added successfully...". "<br>";
+	} else {
+		echo "Error:". "<br>" . $mysqli->error;
+	}
+	//Section 2:Course 1_2
+	$sql = "INSERT INTO Section (section_no, classroom, meeting_days, begin_time, end_time, num_seats, course_no, p_ssn"
+	VALUES (442_2, '300CS', 'T,TH', '8:00AM','9:15AM', '32',442,000000001 )
+	if ($mysqli->query($sql) === TRUE) {
+		echo "Section 2 added successfully...". "<br>";
+	} else {
+		echo "Error:". "<br>" . $mysqli->error;
+	}
+	//Section 3:Course 2_1
+	$sql = "INSERT INTO Section (section_no, classroom, meeting_days, begin_time, end_time, num_seats, course_no, p_ssn"
+	VALUES (315_1, '101CS', 'M,W', '10:00AM','11:15AM', '35',315,000000001 )
+	if ($mysqli->query($sql) === TRUE) {
+		echo "Section 3 added successfully...". "<br>";
+	} else {
+		echo "Error:". "<br>" . $mysqli->error;
+	}
+	//Section 4: Course 2_2
+	$sql = "INSERT INTO Section (section_no, classroom, meeting_days, begin_time, end_time, num_seats, course_no, p_ssn"
+	VALUES (315_2, '101CS', 'T,TH', '10:00AM','11:15AM', '35',315,000000002 )
+	if ($mysqli->query($sql) === TRUE) {
+		echo "Section 4 added successfully...". "<br>";
+	} else {
+		echo "Error:". "<br>" . $mysqli->error;
+	}
+	//Section 5: Course 3_1
+	$sql = "INSERT INTO Section (section_no, classroom, meeting_days, begin_time, end_time, num_seats, course_no, p_ssn"
+	VALUES (362_1, '201CS', 'M,W', '12:00PM','1:15PM', '23',362,000000002 )
+	if ($mysqli->query($sql) === TRUE) {
+		echo "Section 5 added successfully...". "<br>";
+	} else {
+		echo "Error:". "<br>" . $mysqli->error;
+	}
+	//Section 6: Course 3_2
+	$sql = "INSERT INTO Section (section_no, classroom, meeting_days, begin_time, end_time, num_seats, course_no, p_ssn"
+	VALUES (362_2, '201CS', 'T,TH', '12:00PM','1:15PM', '23',362,000000002 )
+	if ($mysqli->query($sql) === TRUE) {
+		echo "Section 6 added successfully...". "<br>";
+	} else {
+		echo "Error:". "<br>" . $mysqli->error;
+	}
+	//Section 7: Course 4_1
+	$sql = "INSERT INTO Section (section_no, classroom, meeting_days, begin_time, end_time, num_seats, course_no, p_ssn"
+	VALUES (323_1, '401CS', 'M,W', '7:00PM','8:15PM', '27',323,000000003 )
+	if ($mysqli->query($sql) === TRUE) {
+		echo "Section 7 added successfully...". "<br>";
+	} else {
+		echo "Error:". "<br>" . $mysqli->error;
+	}
+	//Section 8: Course 4_2
+	$sql = "INSERT INTO Section (section_no, classroom, meeting_days, begin_time, end_time, num_seats, course_no, p_ssn"
+	VALUES (323_2, '401CS', 'T,TH', '7:00PM','8:15PM', '27',323,000000003 )
+	if ($mysqli->query($sql) === TRUE) {
+		echo "Section 8 added successfully...". "<br>";
+	} else {
+		echo "Error:". "<br>" . $mysqli->error;
+	}	
 	/////Need to populate the rest of the requirements on the paper////
 }
 
